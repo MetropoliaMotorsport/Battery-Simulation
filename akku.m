@@ -32,32 +32,32 @@ disp(batterycell.CellModelOptions.BlockParameters);  %lisäasetuksia kennolle  M
 
 
 parallelassembly = ParallelAssembly(... % rinnakkain kokoonpanon konfigurrointi
-    NumParallelCells=16, ...             %kuinka monta kennoa on rinnan
+    NumParallelCells=1, ...             %kuinka monta kennoa on rinnan
     Cell=batterycell, ...
     Topology="SingleStack", ...
     InterCellGap=simscape.Value(0.003,"m")); %kennojen väli rinnan
 
 module = Module(...                     %moduulin konfigurointi
     ParallelAssembly=parallelassembly, ...
-    NumSeriesAssemblies=9, ...          % kuinka monta rinnakain kokoonpanoa on sarjassa
+    NumSeriesAssemblies=16, ...          % kuinka monta rinnakain kokoonpanoa on sarjassa
     InterParallelAssemblyGap=simscape.Value(0.003,"m")); %kennojen väli sarjassa
 
-% f = uifigure("Color","white");
-% modulechart = BatteryChart(Parent=f,Battery=module);        %moduulin renderöinti
-% title(modulechart,"Module Chart")
+f = uifigure("Color","white");
+modulechart = BatteryChart(Parent=f,Battery=module);        %moduulin renderöinti
+title(modulechart,"Module Chart")
 
 moduleassembly = ModuleAssembly(...  % moduuli kokoonpano sarjassa
     Module=repmat(module,1,2), ...   % kaksi peräkkäin
     InterModuleGap=simscape.Value(0.02,"m"));    % väli
 
 
-% f = uifigure("Color","white");
-% modulechart = BatteryChart(Parent=f,Battery=moduleassembly); %moduulikokoonpanon renderöinti
-% title(modulechart,"Module Assembly Chart")
+f = uifigure("Color","white");
+modulechart = BatteryChart(Parent=f,Battery=moduleassembly); %moduulikokoonpanon renderöinti
+title(modulechart,"Module Assembly Chart")
 
 
 batterypack2 = Pack(...                                                         %akku paketti
-    ModuleAssembly=repmat(moduleassembly,1,3), ...                              %neljä riviä
+    ModuleAssembly=repmat(moduleassembly,1,4), ...                              %neljä riviä
     InterModuleAssemblyGap=simscape.Value(0.02,"m"));                          %rivien väli
 
 % f = uifigure("Color","white");
@@ -81,7 +81,7 @@ detailedPset.ModelResolution = "Detailed";          %asetetaan simuloinnin tarkk
 
 lumpedmodule = Module(...
     ParallelAssembly=parallelassembly, ...
-    NumSeriesAssemblies=9, ... 
+    NumSeriesAssemblies=18, ... 
     InterParallelAssemblyGap=simscape.Value(0.008,"m"), ...
     ModelResolution="Detailed");
 
@@ -89,13 +89,23 @@ lumpedmodule = Module(...
 
 module.ModelResolution = "Detailed";
 moduleassemblylumped = ModuleAssembly(...
-    Module=repmat(module,1,1), ...
+    Module=repmat(module,1,2), ...
     InterModuleGap=simscape.Value(0.1,"m"));
 
+additionalModuleAssembly = ModuleAssembly(...
+    Module=module, ...
+    InterModuleGap=simscape.Value(0.1,"m"));
+
+% packlumped = Pack(...
+%     ModuleAssembly=repmat(moduleassemblylumped,1,4), ...
+%     StackingAxis="X",...
+%     InterModuleAssemblyGap=simscape.Value(0.01,"m"));
+
 packlumped = Pack(...
-    ModuleAssembly=repmat(moduleassemblylumped,1,3), ...
+    ModuleAssembly=[repmat(moduleassemblylumped,1,4), additionalModuleAssembly], ...
     StackingAxis="X",...
     InterModuleAssemblyGap=simscape.Value(0.01,"m"));
+
 
 packlumped.BalancingStrategy = "Passive"; 
 
@@ -104,10 +114,8 @@ packlumpedchart = BatteryChart(Parent=f,Battery=packlumped,SimulationStrategyVis
 title(packlumpedchart,"Pack Lumped Simulation Strategy Chart")
 
 
-%buildBattery(packlumped,LibraryName="pouchPackScripted",MaskInitialTargets="VariableNames",MaskParameters="VariableNames");
+%buildBattery(packlumped,LibraryName="PouchPack1",MaskInitialTargets="VariableNames",MaskParameters="VariableNames");
 
-%__________________________________________________ kommentoituna ei luo
-%uutta pakettia
 
 
 
