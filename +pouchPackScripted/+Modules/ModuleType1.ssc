@@ -7,7 +7,7 @@ component ModuleType1
     %
     %    MATLAB version: 9.14
     %    Simscape Battery version: 1.1
-    %    Simscape code generated on: 08-Oct-2024 16:13:16
+    %    Simscape code generated on: 08-Oct-2024 17:24:19
 
     parameters
         SOC_vecCell = {[0, .1, .25, .5, .75, .9, 1],'1'}; % Vector of state-of-charge values, SOC
@@ -33,7 +33,7 @@ component ModuleType1
     parameters(ExternalAccess=none)
         P = 2; % Batteries in Parallel
         S = 24; % Batteries in Series
-        CellCount = P*S; % Number of cells in battery
+        CellCount = 48; % Number of cells in battery
     end
 
     inputs

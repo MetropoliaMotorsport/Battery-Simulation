@@ -1,0 +1,10 @@
+general how to use simscape battery
+https://se.mathworks.com/videos/series/simscape-battery-essentials.html?s_v1=56743&elqem
+
+
+this was the presentation at FSG it has some good info but some not as useful as well
+https://content.mathworks.com/viewer/13cd3df4e0625c62c2f89b7e1c965d64?s_v1=56743&elqem=Copy%20of%20MathWorks%20Technical%20Resources%20for%20Formula%20Student%20Competition&iid=66be18a72324149946c4f7e8&elqTrackId=6b6a355f169b4c339f5040d7cf7681d3&elq=f70b7f3f12964bf4a4024b7c739ead36&elqaid=56743&elqat=1&elqCampaignId=&elqak=8AF5B45D1939FC01D5AA83E3A29EC361473493CE66078507865C34B45DA050C58949
+
+
+This is like a center for sismcape battery documentation
+https://se.mathworks.com/help/simscape-battery/create-battery-pack.html
