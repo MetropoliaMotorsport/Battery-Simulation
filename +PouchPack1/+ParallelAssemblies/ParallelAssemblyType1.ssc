@@ -6,7 +6,7 @@ component ParallelAssemblyType1
     %
     %    MATLAB version: 9.14
     %    Simscape Battery version: 1.1
-    %    Simscape code generated on: 09-Oct-2024 15:01:47
+    %    Simscape code generated on: 09-Oct-2024 15:49:11
 
     parameters
         SOC_vecCell = {[0, .1, .25, .5, .75, .9, 1],'1'}; % Vector of state-of-charge values, SOC

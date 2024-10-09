@@ -41,85 +41,76 @@ ParallelAssemblyType1.CellBalancingResistance = 50; % Cell balancing shunt resis
 %% Battery initial targets
 
 %% ModuleAssembly1.Module1
-ModuleAssembly1.Module1.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly1.Module1.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly1.Module1.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly1.Module1.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly1.Module1.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly1.Module1.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly1.Module1.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly1.Module1.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly1.Module1.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly1.Module1.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly1.Module1.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly1.Module1.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly1.Module1.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly1.Module1.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly1.Module2
-ModuleAssembly1.Module2.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly1.Module2.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly1.Module2.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly1.Module2.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly1.Module2.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly1.Module2.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly1.Module2.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly1.Module2.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly1.Module2.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly1.Module2.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly1.Module2.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly1.Module2.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly1.Module2.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly1.Module2.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly2.Module1
-ModuleAssembly2.Module1.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly2.Module1.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly2.Module1.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly2.Module1.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly2.Module1.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly2.Module1.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly2.Module1.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly2.Module1.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly2.Module1.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly2.Module1.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly2.Module1.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly2.Module1.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly2.Module1.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly2.Module1.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly2.Module2
-ModuleAssembly2.Module2.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly2.Module2.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly2.Module2.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly2.Module2.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly2.Module2.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly2.Module2.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly2.Module2.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly2.Module2.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly2.Module2.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly2.Module2.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly2.Module2.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly2.Module2.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly2.Module2.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly2.Module2.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly3.Module1
-ModuleAssembly3.Module1.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly3.Module1.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly3.Module1.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly3.Module1.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly3.Module1.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly3.Module1.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly3.Module1.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly3.Module1.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly3.Module1.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly3.Module1.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly3.Module1.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly3.Module1.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly3.Module1.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly3.Module1.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly3.Module2
-ModuleAssembly3.Module2.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly3.Module2.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly3.Module2.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly3.Module2.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly3.Module2.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly3.Module2.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly3.Module2.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly3.Module2.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly3.Module2.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly3.Module2.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly3.Module2.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly3.Module2.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly3.Module2.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly3.Module2.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly4.Module1
-ModuleAssembly4.Module1.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly4.Module1.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly4.Module1.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly4.Module1.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly4.Module1.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly4.Module1.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly4.Module1.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly4.Module1.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly4.Module1.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly4.Module1.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly4.Module1.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly4.Module1.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly4.Module1.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly4.Module1.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 %% ModuleAssembly4.Module2
-ModuleAssembly4.Module2.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly4.Module2.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly4.Module2.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly4.Module2.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly4.Module2.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly4.Module2.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly4.Module2.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
-
-%% ModuleAssembly5.Module1
-ModuleAssembly5.Module1.iCell = repmat(0, 16, 1); % Cell current (positive in), A
-ModuleAssembly5.Module1.vCell = repmat(0, 16, 1); % Cell terminal voltage, V
-ModuleAssembly5.Module1.socCell = repmat(1, 16, 1); % Cell state of charge
-ModuleAssembly5.Module1.numCyclesCell = repmat(0, 16, 1); % Cell discharge cycles
-ModuleAssembly5.Module1.temperatureCell = repmat(298.15, 16, 1); % Cell temperature, K
-ModuleAssembly5.Module1.vParallelAssembly = repmat(0, 16, 1); % Parallel Assembly Voltage, V
-ModuleAssembly5.Module1.socParallelAssembly = repmat(1, 16, 1); % Parallel Assembly state of charge
+ModuleAssembly4.Module2.iCell = repmat(0, 18, 1); % Cell current (positive in), A
+ModuleAssembly4.Module2.vCell = repmat(0, 18, 1); % Cell terminal voltage, V
+ModuleAssembly4.Module2.socCell = repmat(1, 18, 1); % Cell state of charge
+ModuleAssembly4.Module2.numCyclesCell = repmat(0, 18, 1); % Cell discharge cycles
+ModuleAssembly4.Module2.temperatureCell = repmat(298.15, 18, 1); % Cell temperature, K
+ModuleAssembly4.Module2.vParallelAssembly = repmat(0, 18, 1); % Parallel Assembly Voltage, V
+ModuleAssembly4.Module2.socParallelAssembly = repmat(1, 18, 1); % Parallel Assembly state of charge
 
 % Suppress MATLAB editor message regarding readability of repmat
 %#ok<*REPMAT>

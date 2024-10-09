@@ -39,7 +39,7 @@ parallelassembly = ParallelAssembly(... % rinnakkain kokoonpanon konfigurrointi
 
 module = Module(...                     %moduulin konfigurointi
     ParallelAssembly=parallelassembly, ...
-    NumSeriesAssemblies=16, ...          % kuinka monta rinnakain kokoonpanoa on sarjassa
+    NumSeriesAssemblies=18, ...          % kuinka monta rinnakain kokoonpanoa on sarjassa
     InterParallelAssemblyGap=simscape.Value(0.003,"m")); %kennojen väli sarjassa
 
 f = uifigure("Color","white");
@@ -102,7 +102,7 @@ additionalModuleAssembly = ModuleAssembly(...
 %     InterModuleAssemblyGap=simscape.Value(0.01,"m"));
 
 packlumped = Pack(...
-    ModuleAssembly=[repmat(moduleassemblylumped,1,4), additionalModuleAssembly], ...
+    ModuleAssembly=[repmat(moduleassemblylumped,1,4), ], ...
     StackingAxis="X",...
     InterModuleAssemblyGap=simscape.Value(0.01,"m"));
 
@@ -114,7 +114,7 @@ packlumpedchart = BatteryChart(Parent=f,Battery=packlumped,SimulationStrategyVis
 title(packlumpedchart,"Pack Lumped Simulation Strategy Chart")
 
 
-%buildBattery(packlumped,LibraryName="PouchPack1",MaskInitialTargets="VariableNames",MaskParameters="VariableNames");
+buildBattery(packlumped,LibraryName="PouchPack1",MaskInitialTargets="VariableNames",MaskParameters="VariableNames");
 
 
 

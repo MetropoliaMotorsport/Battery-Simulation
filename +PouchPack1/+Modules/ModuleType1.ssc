@@ -2,14 +2,14 @@ component ModuleType1
     % ModuleType1:2
     % Module Block
     %    Model resolution: Grouped
-    %    Number of parallel assemblies: 16
+    %    Number of parallel assemblies: 18
     %    Number of cells per parallel assembly: 1
-    %    Series grouping simulation strategy: [1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1]
-    %    Parallel grouping simulation strategy: [1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1]
+    %    Series grouping simulation strategy: [1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1]
+    %    Parallel grouping simulation strategy: [1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1]
     %
     %    MATLAB version: 9.14
     %    Simscape Battery version: 1.1
-    %    Simscape code generated on: 09-Oct-2024 15:01:53
+    %    Simscape code generated on: 09-Oct-2024 15:49:17
 
     parameters
         SOC_vecCell = {[0, .1, .25, .5, .75, .9, 1],'1'}; % Vector of state-of-charge values, SOC
@@ -34,15 +34,15 @@ component ModuleType1
 
     parameters(ExternalAccess=none)
         P = 1; % Batteries in Parallel
-        S = 16; % Batteries in Series
-        SeriesGrouping = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]; % Series grouping simulation strategy
-        ParallelGrouping = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]; % Parallel grouping simulation strategy
+        S = 18; % Batteries in Series
+        SeriesGrouping = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]; % Series grouping simulation strategy
+        ParallelGrouping = [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]; % Parallel grouping simulation strategy
     end
 
     parameters(Access=private)
         CumNumModules = cumsum(SeriesGrouping); % Cumulative number of modules
         TotalNumModels = sum(ParallelGrouping); % Total number of cell models
-        ModelToLumpMapping = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]; % Mapping of models to lumps
+        ModelToLumpMapping = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18]; % Mapping of models to lumps
         SeriesConnections = find(diff(ModelToLumpMapping)) + 1; % Series connections
         ParallelConnections = find(~diff(ModelToLumpMapping)) + 1; % Parallel connections
     end
@@ -57,13 +57,13 @@ component ModuleType1
     end
 
     variables
-        iCell = {repmat(0,16,1),'A'}; % Cell current (positive in)
-        vCell = {repmat(0,16,1),'V'}; % Cell terminal voltage
-        socCell = {value={repmat(1,16,1),'1'},priority=priority.high}; % Cell state of charge
-        numCyclesCell = {value={repmat(0,16,1),'1'},priority=priority.high}; % Cell discharge cycles
-        temperatureCell = {value={repmat(298.15,16,1),'K'},priority=priority.high}; % Cell temperature
-        vParallelAssembly = {value={repmat(0,16,1),'V'},priority=priority.none}; % Parallel Assembly Voltage
-        socParallelAssembly = {value={repmat(1,16,1),'1'},priority=priority.none}; % Parallel Assembly state of charge
+        iCell = {repmat(0,18,1),'A'}; % Cell current (positive in)
+        vCell = {repmat(0,18,1),'V'}; % Cell terminal voltage
+        socCell = {value={repmat(1,18,1),'1'},priority=priority.high}; % Cell state of charge
+        numCyclesCell = {value={repmat(0,18,1),'1'},priority=priority.high}; % Cell discharge cycles
+        temperatureCell = {value={repmat(298.15,18,1),'K'},priority=priority.high}; % Cell temperature
+        vParallelAssembly = {value={repmat(0,18,1),'V'},priority=priority.none}; % Parallel Assembly Voltage
+        socParallelAssembly = {value={repmat(1,18,1),'1'},priority=priority.none}; % Parallel Assembly state of charge
     end
 
     intermediates
